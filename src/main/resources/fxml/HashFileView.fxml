@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootVBox" alignment="CENTER" prefHeight="420.0" prefWidth="560.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hifumi123.hashfile.controller.HashFileController">
+   <children>
+      <TextArea fx:id="resultTextArea" prefHeight="640.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="20.0">
+         <children>
+            <Label text="算法：">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="md5CheckBox" mnemonicParsing="false" selected="true" text="MD5" />
+            <CheckBox fx:id="sha1CheckBox" layoutX="268.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="SHA1" />
+            <CheckBox fx:id="crc32CheckBox" layoutX="243.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="CRC32" />
+         </children></HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="184.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#openAndHashFile" text="打开..." />
+            <Button layoutX="220.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearResultTextArea" text="清除" />
+            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#copyToClipboard" text="复制" />
+            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveResultAsFile" text="保存..." />
+         </children>
+      </HBox>
+      <Label fx:id="stateLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
