@@ -52,4 +52,30 @@ public class MessageDigestUtilsTest {
 			e.printStackTrace();
 		}
 	}
+
+	@Test
+	public void sha256HexTest() {
+		String sha256 = "ebf5d369faaab60da6325ae80d8fcf17e957d1ec3229820e62ba0abb9ecfd5f3";
+
+		try {
+			String sha256Hex = MessageDigestUtils.sha256Hex(testFile);
+
+			Assertions.assertTrue(sha256.equalsIgnoreCase(sha256Hex));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+	public void sha512HexTest() {
+		String sha512 = "622ecb073d05089d10f4822ce3d6769fb0557aa8ed8556244d5e9ea7bd0909443228c2cd00826adbbc5b9a544125ed7dd4968750f14692135f7e03a81c347566";
+
+		try {
+			String sha512Hex = MessageDigestUtils.sha512Hex(testFile);
+
+			Assertions.assertTrue(sha512.equalsIgnoreCase(sha512Hex));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

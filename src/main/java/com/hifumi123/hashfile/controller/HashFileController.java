@@ -37,6 +37,12 @@ public class HashFileController {
 	private CheckBox sha1CheckBox;
 
 	@FXML
+	private CheckBox sha256CheckBox;
+
+	@FXML
+	private CheckBox sha512CheckBox;
+
+	@FXML
 	private CheckBox crc32CheckBox;
 
 	@FXML
@@ -82,6 +88,18 @@ public class HashFileController {
 						String sha1Hex = MessageDigestUtils.sha1Hex(file);
 
 						result.setSha1Hex(sha1Hex);
+					}
+
+					if (sha256CheckBox.isSelected()) {
+						String sha256Hex = MessageDigestUtils.sha256Hex(file);
+
+						result.setSha256Hex(sha256Hex);
+					}
+
+					if (sha512CheckBox.isSelected()) {
+						String sha512Hex = MessageDigestUtils.sha512Hex(file);
+
+						result.setSha512Hex(sha512Hex);
 					}
 
 					if (crc32CheckBox.isSelected()) {

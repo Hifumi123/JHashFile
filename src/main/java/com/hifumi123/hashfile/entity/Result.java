@@ -10,6 +10,10 @@ public class Result {
 
 	private String sha1Hex;
 
+	private String sha256Hex;
+
+	private String sha512Hex;
+
 	private String crc32Hex;
 
 	public Result() {
@@ -17,6 +21,8 @@ public class Result {
 		fileSize = null;
 		md5Hex = null;
 		sha1Hex = null;
+		sha256Hex = null;
+		sha512Hex = null;
 		crc32Hex = null;
 	}
 
@@ -50,6 +56,22 @@ public class Result {
 
 	public void setSha1Hex(String sha1Hex) {
 		this.sha1Hex = sha1Hex;
+	}
+
+	public String getSha256Hex() {
+		return sha256Hex;
+	}
+
+	public void setSha256Hex(String sha256Hex) {
+		this.sha256Hex = sha256Hex;
+	}
+
+	public String getSha512Hex() {
+		return sha512Hex;
+	}
+
+	public void setSha512Hex(String sha512Hex) {
+		this.sha512Hex = sha512Hex;
 	}
 
 	public String getCrc32Hex() {
@@ -86,6 +108,18 @@ public class Result {
 		if (sha1Hex != null) {
 			sb.append("SHA1：");
 			sb.append(sha1Hex);
+			sb.append(System.lineSeparator());
+		}
+
+		if (sha256Hex != null) {
+			sb.append("SHA256：");
+			sb.append(sha256Hex);
+			sb.append(System.lineSeparator());
+		}
+
+		if (sha512Hex != null) {
+			sb.append("SHA512：");
+			sb.append(sha512Hex);
 			sb.append(System.lineSeparator());
 		}
 

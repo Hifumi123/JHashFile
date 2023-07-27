@@ -20,4 +20,14 @@ public class MessageDigestUtils {
 		DigestUtils du = new DigestUtils(MessageDigestAlgorithms.SHA_1);
 		return du.digestAsHex(file);
 	}
+
+	public static String sha256Hex(File file) throws IOException {
+		DigestUtils du = new DigestUtils(MessageDigestAlgorithms.SHA_256);
+		return du.digestAsHex(file);
+	}
+
+	public static String sha512Hex(File file) throws IOException {
+		DigestUtils du = new DigestUtils(MessageDigestAlgorithms.SHA_512);
+		return du.digestAsHex(file);
+	}
 }

@@ -25,6 +25,8 @@
             </Label>
             <CheckBox fx:id="md5CheckBox" mnemonicParsing="false" selected="true" text="MD5" />
             <CheckBox fx:id="sha1CheckBox" layoutX="268.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="SHA1" />
+            <CheckBox fx:id="sha256CheckBox" layoutX="288.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="SHA256" />
+            <CheckBox fx:id="sha512CheckBox" layoutX="405.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="SHA512" />
             <CheckBox fx:id="crc32CheckBox" layoutX="243.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="CRC32" />
          </children></HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="184.0" spacing="20.0">
