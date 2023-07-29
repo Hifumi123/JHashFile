@@ -3,7 +3,7 @@
   
   <groupId>com.hifumi123</groupId>
   <artifactId>hashfile</artifactId>
-  <version>0.1.0</version>
+  <version>0.3.0</version>
   <name>JHashFile</name>
   <description>Java Hash File Tool</description>
   

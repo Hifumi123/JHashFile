@@ -16,6 +16,8 @@ public class Result {
 
 	private String crc32Hex;
 
+	private String checkResult;
+
 	public Result() {
 		filePath = null;
 		fileSize = null;
@@ -24,6 +26,7 @@ public class Result {
 		sha256Hex = null;
 		sha512Hex = null;
 		crc32Hex = null;
+		checkResult = null;
 	}
 
 	public String getFilePath() {
@@ -80,6 +83,14 @@ public class Result {
 
 	public void setCrc32Hex(String crc32Hex) {
 		this.crc32Hex = crc32Hex;
+	}
+
+	public String getCheckResult() {
+		return checkResult;
+	}
+
+	public void setCheckResult(String checkResult) {
+		this.checkResult = checkResult;
 	}
 
 	@Override

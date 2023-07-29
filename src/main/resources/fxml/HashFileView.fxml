@@ -3,8 +3,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -29,6 +31,22 @@
             <CheckBox fx:id="sha512CheckBox" layoutX="405.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="SHA512" />
             <CheckBox fx:id="crc32CheckBox" layoutX="243.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="CRC32" />
          </children></HBox>
+      <HBox alignment="CENTER" spacing="20.0">
+         <children>
+            <Label text="对比校验：">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="checkInputTextField" prefWidth="240.0" />
+            <ChoiceBox fx:id="checkAlgorithmChoiceBox" prefWidth="75.0" />
+            <Label fx:id="checkResultLabel" prefWidth="50.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="184.0" spacing="20.0">
          <children>
             <Button mnemonicParsing="false" onAction="#openAndHashFile" text="打开..." />
